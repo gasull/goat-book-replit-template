@@ -4,7 +4,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 hostname = socket.gethostname()
-is_local_machine = "work-obeythetestinggoat" in hostname
+
+# Hostname of your local machine for when running the tests locally
+is_local_machine = "YOUR-HOSTNAME" in hostname
 
 # Configure Firefox WebDriver
 if is_local_machine:
