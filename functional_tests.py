@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 hostname = socket.gethostname()
 
 # Hostname of your local machine for when running the tests locally
-is_local_machine = "YOUR-HOSTNAME" in hostname
+is_local_machine = "<YOUR-HOSTNAME>" in hostname
 
 # Configure Firefox WebDriver
 if is_local_machine:
@@ -24,8 +24,8 @@ else:
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-dev-shm-usage")
     browser = webdriver.Chrome(options=options)
-    dev_domain = ("https://83a4be34-00a1-4161-b902-5cd071ee95be-00-" 
-                  "2c0cs3xz0oqim.sisko.replit.dev/")
+    # You can find this URL in the browser when running the project
+    dev_domain = ("<URL of your replit.dev>")
     
 browser.get(dev_domain)
 assert "Congratulations!" in browser.title
